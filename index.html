@@ -6,9 +6,13 @@
 	<title>When Is This Thursday?</title>
 	<meta name="description" content="A treatise on scheduling">
 	<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/tui-calendar@1.15.1/dist/tui-calendar.min.js"></script>
+	<script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
+	<script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+	<script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
 	<script src="datescript.js" type="module" defer></script> 
 	<link rel="stylesheet" href="thursday_styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tui-calendar@1.15.1/dist/tui-calendar.min.css">
 </head>
 
 <body>
@@ -38,13 +42,13 @@ last week" or, I suppose, "the Thursday before this Thursday."</p>
 that "this Thursday" is always "the Thursday in this week", but also that 
 "last Thursday" is "the last Thursday in the past."</p>
 
-<p>And what if <strong>today</strong> is Thursday? Is today "this Thursday"? Depending on your 
-feelings about the above questions, you may well think that the Thursday of 
-last week is "last Thursday," today is nothing, and "next Thursday" is the same 
-as "this Thursday" because it is both the next Thursday in the future and the 
-Thursday in next week. </p>
+<p>And what if <strong>today</strong> is Thursday? Is today "this Thursday" or 
+"last Thursday?" Depending on your feelings about the above questions, you may 
+well think that the Thursday of last week is "last Thursday," today is nothing, 
+and "next Thursday" is the same as "this Thursday" because it is both the next 
+Thursday in the future and the Thursday in next week. </p>
 
-<p>And if it's not Thursday, this puts every nearby Thursday in a sort of quantum 
+<p>And if it's not Thursday, this puts some nearby Thursdays in a sort of quantum 
 state of both being and not being last, this, and/or next Thursday, only 
 collapsing the waveform when somebody gets a confused look on their face and 
 says, "wait, which Thursday?"</p>
@@ -52,10 +56,10 @@ says, "wait, which Thursday?"</p>
 <p>Here. Let me spend too much effort visualizing this for you:</p>
 
 <figure>
-[Charty McChartFace]
+	<div id="calendar" style="height: 800px;"></div>
 </figure>
 
-<p>See? Vague dates are dumb. Be more specific, 
+<p>See? Vague dates are extra dumb. Be more specific, 
 	<span
 		title="I kid. I kid. Paydon's just the last person I can remember having this confusion with."
 		class="hover-hint"
